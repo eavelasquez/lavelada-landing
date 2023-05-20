@@ -1,6 +1,6 @@
 ---
-import Header from "../components/header.astro"
-
+import Background from '../components/Background.astro'
+import Header from '../components/header.astro'
 ---
 
 <html lang="es">
@@ -13,7 +13,7 @@ import Header from "../components/header.astro"
   <body>
     <Header />
 
-    <main>
+    <div class="relative">
       <section
         id="boxers"
         class={`
@@ -23,10 +23,7 @@ import Header from "../components/header.astro"
 				  h-[40vh] md:h-[65vh] lg:h-screen pt-4 lg:pt-24 border-b border-white/10 overflow-hidden
         `}
       >
-        <div
-          class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#131824] via-zinc-900 to-zinc-950 h-full w-full inset-0 absolute"
-        >
-        </div>
+        <Background />
 
         <div class="relative w-full">
           <img class="left-0 h-full z-50" src="/boxers/coscu.png" alt="Coscu" />
@@ -148,7 +145,7 @@ import Header from "../components/header.astro"
           <h3 class="font-boxing uppercase text-7xl">German</h3>
         </div>
       </div>
-    </main>
+    </div>
 
     <footer></footer>
   </body>
