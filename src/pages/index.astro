@@ -12,7 +12,7 @@
       >
         <img
           class="w-32 lg:w-64 h-auto"
-          src="/lavelada-logo.webp"
+          src="/assets/lavelada-logo.webp"
           alt="Logo La Velada del Año III"
           width="385"
           height="412"
@@ -145,6 +145,27 @@
           </div>
         </div>
       </div>
+
+      <div
+        id="versus"
+        class="absolute bottom-48 z-58 mx-auto left-1/2 -translate-x-1/2 flex justify-center flex-col gap-y-0 opacity-0 invisible"
+      >
+        <div class="px-5 pt-4 pb-2 bg-black text-white text-center">
+          <h3 class="font-boxing uppercase text-7xl">Coscu</h3>
+        </div>
+
+        <img
+          class="w-16 mx-auto absolute left-1/2 -translate-x-1/2"
+          src="/assets/street-fighter-vs-icon.webp"
+          alt="vs"
+          width="64"
+          height="64"
+        />
+
+        <div class="px-5 pt-4 pb-2 bg-white text-black text-center">
+          <h3 class="font-boxing uppercase text-7xl">German</h3>
+        </div>
+      </div>
     </main>
 
     <footer></footer>
@@ -168,3 +189,69 @@
     background: #131313;
   }
 </style>
+
+<script>
+  const $boxers = document.querySelector('#boxers')
+  const $boxersImages = $boxers.querySelectorAll('img')
+
+  const $info = document.querySelector('#info') as HTMLElement
+  const $versus = document.querySelector('#versus') as HTMLElement
+
+  $boxersImages.forEach(($img) => {
+    $img.addEventListener('mouseenter', () => {
+      const sectionImages = $img.parentNode.children
+      const position = Array.from(sectionImages).indexOf($img)
+
+      // get image for the left and the right side
+      const [leftBoxer, rightBoxer] = [
+        $boxersImages[position], // left
+        $boxersImages[position + $boxersImages.length / 2] // right
+      ]
+
+      // get and show boxers name
+      const [leftBoxerName, rightBoxerName] = $versus.querySelectorAll('h3')
+      leftBoxerName.innerText = leftBoxer.alt
+      rightBoxerName.innerText = rightBoxer.alt
+
+      // hide the info div
+      $info.style.opacity = '0'
+      $info.style.transition = 'all .3s ease-in-out'
+
+      // show the versus div
+      $versus.style.opacity = '1'
+      $versus.style.visibility = 'visible'
+      $versus.style.transition = 'all .3s ease-in-out'
+
+      // outshine the boxers that don't interest
+      $boxersImages.forEach(($img) => {
+        $img.style.filter = 'blur(2px) grayscale(.8)'
+        $img.style.transition = 'all 3s ease-in-out'
+      })
+
+      // highlight the boxers that interest
+      leftBoxer.style.scale = '1.2'
+      leftBoxer.style.filter = 'contrast(1.1)'
+      leftBoxer.style.transition = ' all .3s ease-in-out'
+
+      rightBoxer.style.scale = '1.2'
+      rightBoxer.style.filter = 'contrast(1.1)'
+      rightBoxer.style.transition = ' all .3s ease-in-out'
+    })
+
+    $img.addEventListener('mouseleave', () => {
+      $boxersImages.forEach(($img) => {
+        $img.style.scale = '1'
+        $img.style.filter = 'none'
+        $img.style.transition = 'all .3s ease-in-out'
+      })
+
+      // show the info div
+      $info.style.opacity = '1'
+      $info.style.transition = 'all .3s ease-in-out'
+
+      // hide the versus div
+      $versus.style.opacity = '0'
+      $versus.style.transition = 'all .3s ease-in-out'
+    })
+  })
+</script>
