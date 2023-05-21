@@ -1,7 +1,7 @@
 ---
 import Background from '../components/Background.astro'
 import Header from '../components/Header.astro'
-import Notice from '../components/Notice.astro';
+import Notice from '../components/Notice.astro'
 ---
 
 <html lang="es">
@@ -30,66 +30,82 @@ import Notice from '../components/Notice.astro';
         <div class="relative w-full">
           <img
             class="left-0 h-full z-50"
-            src="/boxers/coscu.webp"
+            srcset="/boxers/coscu-mobile.webp 767w, /boxers/coscu.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="Coscu"
+            fetchpriority="high"
           />
           <img
             class="left-[5%] h-[80%] z-40 animate-fade-right"
-            src="/boxers/mayichi.webp"
+            srcset="/boxers/mayichi-mobile.webp 767w, /boxers/mayichi.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="Mayichi"
           />
           <img
             class="left-[15%] h-[75%] z-30 animate-fade-right animate-delay-300"
-            src="/boxers/viruzz.webp"
+            srcset="/boxers/viruzz-mobile.webp 767w, /boxers/viruzz.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="Viruzz"
           />
           <img
             class="left-[30%] h-[70%] z-20 animate-fade-right animate-delay-500"
-            src="/boxers/fernanfloo.webp"
+            srcset="/boxers/fernanfloo-mobile.webp 767w, /boxers/fernanfloo.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="Fernanfloo"
           />
           <img
             class="left-[45%] h-[68%] z-10 animate-fade-right animate-delay-700"
-            src="/boxers/larivers.webp"
+            srcset="/boxers/larivers-mobile.webp 767w, /boxers/larivers.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="La Rivers"
           />
           <img
             class="left-[50%] h-[63%] z-0 animate-fade-right animate-delay-1000"
-            src="/boxers/papigavi.webp"
+            srcset="/boxers/papigavi-mobile.webp 767w, /boxers/papigavi.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="Papigavi"
+            fetchpriority="low"
           />
         </div>
 
         <div class="relative w-full">
           <img
             class="right-0 h-full z-50"
-            src="/boxers/german.webp"
+            srcset="/boxers/german-mobile.webp 767w, /boxers/german.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="German"
+            fetchpriority="high"
           />
           <img
             class="right-[5%] h-[80%] z-40 animate-fade-left"
-            src="/boxers/amouranth.webp"
+            srcset="/boxers/amouranth-mobile.webp 767w, /boxers/amouranth.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="Amouranth"
           />
           <img
             class="right-[15%] h-[75%] z-30 animate-fade-left animate-delay-300"
-            src="/boxers/shelao.webp"
+            srcset="/boxers/shelao-mobile.webp 767w, /boxers/shelao.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="Shelao"
           />
           <img
             class="right-[30%] h-[70%] z-20 animate-fade-left animate-delay-500"
-            src="/boxers/luzu.webp"
+            srcset="/boxers/luzu-mobile.webp 767w, /boxers/luzu.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="Luzu"
           />
           <img
             class="right-[42%] h-[66%] z-10 animate-fade-left animate-delay-700"
-            src="/boxers/rivers.webp"
+            srcset="/boxers/rivers-mobile.webp 767w, /boxers/rivers.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="Rivers"
           />
           <img
             class="right-[50%] h-[63%] z-0 animate-fade-left animate-delay-1000"
-            src="/boxers/ampeter.webp"
+            srcset="/boxers/ampeter-mobile.webp 767w, /boxers/ampeter.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
             alt="Ampeter"
+            fetchpriority="low"
           />
         </div>
       </section>
