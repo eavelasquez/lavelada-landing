@@ -4,8 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				boxing: ['Boxing', 'Adjusted Arial Fallback', 'sans-serif'],
-				'boxing-striped': ['Boxing Striped', 'Adjusted Arial Fallback', 'sans-serif']
+				boxing: ['Boxing', 'Adjusted Arial Fallback', 'sans-serif']
 			}
 		},
 	},
