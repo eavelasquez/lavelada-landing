@@ -2,6 +2,10 @@
 
 This is a landing page for La Velada, a boxing event organized by the well-known streamer [Ibai Llanos](https://twitch.tv/ibai).
 
+## Preview
+
+<img width="1799" alt="Screenshot from 2023-05-20" src="https://repository-images.githubusercontent.com/643387733/3416676f-01ac-4c77-96d9-a55fee8c9bf6">
+
 ## 🚀 Project Structure
 
 This project is built with [Astro](https://astro.build), a new framework for building websites using JavaScript, HTML, and CSS. Inside of this project, you'll see the following folders and files:
@@ -15,14 +19,13 @@ This project is built with [Astro](https://astro.build), a new framework for bui
 │   ├── favicon.svg
 ├── src/
 │   ├── components/
+│   │   ├── Advertisements.astro
 │   │   ├── Background.astro
-│   │   ├── Boxer.astro
-│   │   ├── BoxerList.astro
 │   │   ├── Footer.astro
 │   │   ├── Header.astro
-│   │   ├── Section.astro
-│   │   ├── Social.astro
-│   │   └── Sponsors.astro
+│   │   ├── Hero.astro
+│   │   ├── Map.astro
+│   │   └── Notice.astro
 │   └── pages/
 │       └── index.astro
 ├── astro.config.mjs
