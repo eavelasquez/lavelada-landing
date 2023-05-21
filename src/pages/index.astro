@@ -1,7 +1,9 @@
 ---
+import Advertisements from '../components/Advertisements.astro'
 import Background from '../components/Background.astro'
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
+import Map from '../components/Map.astro'
 import Notice from '../components/Notice.astro'
 ---
 
@@ -170,57 +172,8 @@ import Notice from '../components/Notice.astro'
       </div>
     </div>
 
-    <section
-      class="grid grid-cols-2 max-w-6xl gap-4 m-auto px-6 pt-20 pb-10 w-full"
-    >
-      <a
-        class="col-span-2 lg:col-span-1 w-full rounded hover:scale-[102%] hover:contrast-[110%] block transition"
-        href="https://www.revolut.com/es-ES/promo/velada-de-ibai/"
-        target="_blank"
-        rel="noopener nofollow"
-      >
-        <img
-          class="aspect-[26/9] object-cover w-full rounded border border-white/10"
-          src="https://lavelada.es/wp-content/uploads/2023/05/INH_INH_Retail_598_LaVeladadelAnoIIIConsigue20E_IMG_580x200_NA_H_1_ES_ES_Apr2023_.png"
-          alt="Consigue 20€ por abrir tu cuenta en Revolut"
-        />
-      </a>
-
-      <a
-        class="col-span-2 lg:col-span-1 w-full rounded hover:scale-[102%] hover:contrast-[110%] block transition"
-        href="https://cloud.e.alsa.com/veladaIII?utm_source=c%C3%B3mo_llegar&utm_medium=web&utm_campaign=2023_07_lavelada&utm_content=abr-jul"
-        target="_blank"
-        rel="noopener nofollow"
-      >
-        <img
-          class="aspect-[26/9] object-cover object-left w-full rounded border border-white/10"
-          src="https://lavelada.es/wp-content/uploads/2023/05/Como-LLegar-600x1080-1.png"
-          alt="Descuento del 40% en tu viaje con Alsa"
-        />
-      </a>
-    </section>
-
-    <section class="max-w-6xl gap-4 m-auto px-6 pt-10 pb-20 w-full">
-      <h2
-        class="font-boxing text-white pb-4 uppercase text-center text-4xl font-extralight"
-      >
-        ¿Cómo llegar al evento?
-      </h2>
-
-      <a
-        class="hover:scale-[102%] hover:contrast-[110%] block transition w-full"
-        href="https://www.google.com/maps/place/Estadio+C%C3%ADvitas+Metropolitano/@40.4351624,-3.604488,16.61z/data=!4m6!3m5!1s0xd422fea8401b789:0x245d0d64dad50ec4!8m2!3d40.4361939!4d-3.5994674!16s%2Fm%2F05515km"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          class="rounded shadow-lg shadow-gray-100 w-full h-auto border border-black/10 invert"
-          src="/assets/map.png"
-          alt="Mapa de la localización de La Velada del Año"
-          loading="lazy"
-        />
-      </a>
-    </section>
+    <Advertisements />
+    <Map />
 
     <Footer />
   </body>
