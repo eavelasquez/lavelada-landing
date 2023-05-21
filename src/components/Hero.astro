@@ -1,0 +1,224 @@
+---
+import Background from "./Background.astro";
+
+---
+
+<div class="relative">
+  <section
+    id="boxers"
+    class={`
+      flex justify-between relative
+      [&>div>img]:absolute [&>div>img]:bottom-0 [&>div>img]:w-auto
+       [&>div>img]:animate-ease-in-out [&>div>img]:animate-duration-700
+      h-[40vh] md:h-[65vh] lg:h-screen pt-4 lg:pt-24 border-b border-white/10 overflow-hidden
+    `}
+  >
+    <Background />
+
+    <div class="relative w-full">
+      <img
+        class="left-0 h-full z-50"
+        srcset="/boxers/coscu-mobile.webp 767w, /boxers/coscu.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="Coscu"
+        fetchpriority="high"
+      />
+      <img
+        class="left-[5%] h-[80%] z-40 animate-fade-right"
+        srcset="/boxers/mayichi-mobile.webp 767w, /boxers/mayichi.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="Mayichi"
+      />
+      <img
+        class="left-[15%] h-[75%] z-30 animate-fade-right animate-delay-300"
+        srcset="/boxers/viruzz-mobile.webp 767w, /boxers/viruzz.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="Viruzz"
+      />
+      <img
+        class="left-[30%] h-[70%] z-20 animate-fade-right animate-delay-500"
+        srcset="/boxers/fernanfloo-mobile.webp 767w, /boxers/fernanfloo.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="Fernanfloo"
+      />
+      <img
+        class="left-[45%] h-[68%] z-10 animate-fade-right animate-delay-700"
+        srcset="/boxers/la-rivers-mobile.webp 767w, /boxers/la-rivers.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="La Rivers"
+      />
+      <img
+        class="left-[50%] h-[63%] z-0 animate-fade-right animate-delay-1000"
+        srcset="/boxers/papigavi-mobile.webp 767w, /boxers/papigavi.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="Papigavi"
+        fetchpriority="low"
+      />
+    </div>
+
+    <div class="relative w-full">
+      <img
+        class="right-0 h-full z-50"
+        srcset="/boxers/german-mobile.webp 767w, /boxers/german.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="German"
+        fetchpriority="high"
+      />
+      <img
+        class="right-[5%] h-[80%] z-40 animate-fade-left"
+        srcset="/boxers/amouranth-mobile.webp 767w, /boxers/amouranth.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="Amouranth"
+      />
+      <img
+        class="right-[15%] h-[75%] z-30 animate-fade-left animate-delay-300"
+        srcset="/boxers/shelao-mobile.webp 767w, /boxers/shelao.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="Shelao"
+      />
+      <img
+        class="right-[30%] h-[70%] z-20 animate-fade-left animate-delay-500"
+        srcset="/boxers/luzu-mobile.webp 767w, /boxers/luzu.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="Luzu"
+      />
+      <img
+        class="right-[42%] h-[66%] z-10 animate-fade-left animate-delay-700"
+        srcset="/boxers/rivers-mobile.webp 767w, /boxers/rivers.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="Rivers"
+      />
+      <img
+        class="right-[50%] h-[63%] z-0 animate-fade-left animate-delay-1000"
+        srcset="/boxers/ampeter-mobile.webp 767w, /boxers/ampeter.webp"
+        sizes="(max-width: 767px) 767px, 100vw"
+        alt="Ampeter"
+        fetchpriority="low"
+      />
+    </div>
+  </section>
+
+  <div
+    id="info"
+    class="block lg:absolute lg:bottom-48 z-50 mx-auto lg:left-1/2 lg:-translate-x-1/2"
+  >
+    <div class="flex flex-col">
+      <div class="px-5 pt-4 pb-2 bg-white text-black text-center">
+        <h2 class="font-boxing text-7xl">1 de JULIO</h2>
+      </div>
+
+      <div class="px-5 pt-4 pb-1 bg-black text-white text-center">
+        <a
+          class="font-boxing text-[46px] hover:contrast-150 hover:scale-105 transition inline-block"
+          href="https://twitch.tv/ibai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="text-white">twitch.tv/</span><span
+            class="text-yellow-300"
+          >
+            ibai
+          </span>
+        </a>
+      </div>
+
+      <div class="px-5 pt-2 pb-1 bg-sky-600 text-black text-center">
+        <a
+          class="hover:contrast-150 hover:scale-105 transition font-boxing text-4xl inline-block text-white"
+          href="https://www.entradas.com/artist/la-velada-del-ano/?affiliate=LVL"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Comprar entradas
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="versus"
+    class="absolute bottom-48 z-58 mx-auto left-1/2 -translate-x-1/2 flex justify-center flex-col gap-y-0 opacity-0 invisible"
+  >
+    <div class="px-5 pt-4 pb-2 bg-black text-white text-center">
+      <h3 class="font-boxing uppercase text-7xl">Coscu</h3>
+    </div>
+
+    <img
+      class="w-16 mx-auto absolute left-1/2 -translate-x-1/2"
+      src="/assets/street-fighter-vs-icon.webp"
+      alt="vs"
+      width="64"
+      height="64"
+    />
+
+    <div class="px-5 pt-4 pb-2 bg-white text-black text-center">
+      <h3 class="font-boxing uppercase text-7xl">German</h3>
+    </div>
+  </div>
+</div>
+
+<script>
+  const $boxers = document.querySelector('#boxers')
+  const $boxersImages = $boxers.querySelectorAll('img')
+
+  const $info = document.querySelector('#info') as HTMLElement
+  const $versus = document.querySelector('#versus') as HTMLElement
+
+  $boxersImages.forEach(($img) => {
+    $img.addEventListener('mouseenter', () => {
+      const sectionImages = $img.parentNode.children
+      const position = Array.from(sectionImages).indexOf($img)
+
+      // get image for the left and the right side
+      const [leftBoxer, rightBoxer] = [
+        $boxersImages[position], // left
+        $boxersImages[position + $boxersImages.length / 2] // right
+      ]
+
+      // get and show boxers name
+      const [leftBoxerName, rightBoxerName] = $versus.querySelectorAll('h3')
+      leftBoxerName.innerText = leftBoxer.alt
+      rightBoxerName.innerText = rightBoxer.alt
+
+      // hide the info div
+      $info.style.opacity = '0'
+      $info.style.transition = 'all .3s ease-in-out'
+
+      // show the versus div
+      $versus.style.opacity = '1'
+      $versus.style.visibility = 'visible'
+      $versus.style.transition = 'all .3s ease-in-out'
+
+      // outshine the boxers that don't interest
+      $boxersImages.forEach(($img) => {
+        $img.style.filter = 'blur(2px) grayscale(.8)'
+        $img.style.transition = 'all 3s ease-in-out'
+      })
+
+      // highlight the boxers that interest
+      leftBoxer.style.scale = '1.2'
+      leftBoxer.style.filter = 'contrast(1.1)'
+      leftBoxer.style.transition = ' all .3s ease-in-out'
+
+      rightBoxer.style.scale = '1.2'
+      rightBoxer.style.filter = 'contrast(1.1)'
+      rightBoxer.style.transition = ' all .3s ease-in-out'
+    })
+
+    $img.addEventListener('mouseleave', () => {
+      $boxersImages.forEach(($img) => {
+        $img.style.scale = '1'
+        $img.style.filter = 'none'
+        $img.style.transition = 'all .3s ease-in-out'
+      })
+
+      // show the info div
+      $info.style.opacity = '1'
+      $info.style.transition = 'all .3s ease-in-out'
+
+      // hide the versus div
+      $versus.style.opacity = '0'
+      $versus.style.transition = 'all .3s ease-in-out'
+    })
+  })
+</script>
